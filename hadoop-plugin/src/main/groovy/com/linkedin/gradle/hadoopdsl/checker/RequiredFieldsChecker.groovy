@@ -154,7 +154,7 @@ class RequiredFieldsChecker extends BaseStaticChecker {
   @Override
   void visitJob(PinotBuildAndPush job) {
     if (job.tableName == null || job.inputPath == null || job.pushLocation == null) {
-      project.logger.lifecycle("RequiredFieldsChecker ERROR: PinotBuildAndPushJob ${job.name} must set tableName, inputPath, and pushLocation);
+      project.logger.lifecycle("RequiredFieldsChecker ERROR: PinotBuildAndPushJob ${job.name} must set tableName, inputPath, and pushLocation");
       foundError = true;
     }
   }
